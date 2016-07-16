@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<pre>
+    hello template
+
+    ##注释
+    #*
+    注释
+    *#
+    $!{value1}
+    ${value2}
+    $!{value2}
+
+    #foreach($color in $colors)
+        Color $!{foreach.index}/$!{foreach.count}:$!{color}
+    #end
+
+    #foreach($key in $map.keySet())
+        Numbers $!{foreach.index}/$!{foreach.count}:$!{key} $map.get($key)
+    #end
+
+    #foreach($kv in $map.entrySet())
+        Numbers $!{foreach.index}/$!{foreach.count}:$!{kv.key} $!{kv.value}
+    #end
+
+    $!{user.name}
+    $!{user.getName()}
+</pre>
+
+</body>
+</html>
