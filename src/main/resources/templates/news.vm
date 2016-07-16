@@ -26,6 +26,29 @@
 
     $!{user.name}
     $!{user.getName()}
+
+    #set($title="rowcoder")
+    Include:#include("header.vm")
+    Parse:#parse("header.vm")
+
+    #macro (render_color, $index, $color)
+        Color By Macro $index, $color
+    #end
+
+    #foreach($color in $colors)
+        #render_color($color, $color.index)
+    #end
+
+    #set($hello="hello")
+    #set($hword="$!{hello} world")
+    #set($hword2='$!{hello} world')
+
+    hword $!{hword}
+    hword2 $!{hword2}
+
+    hword $hword
+    hword2 $hword2
+
 </pre>
 
 </body>
